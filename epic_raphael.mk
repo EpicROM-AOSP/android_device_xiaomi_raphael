@@ -1,4 +1,4 @@
-# Copyright (C) 2022 VoltageOS
+# Copyright (C) 2022 EpicROM-AOSP
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,20 +15,21 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/xiaomi/raphael/device.mk)
 
-# Inherit some common VoltageOS stuff.
-$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
+# Inherit some common EpicROM-AOSP stuff.
+$(call inherit-product, vendor/epic/config/common_full_phone.mk)
 
 # Official-ify
-VOLTAGE_BUILD_TYPE := OFFICIAL
-
-# UDFPS animations
+EPIC_BUILD_TYPE := OFFICIAL
+WITH_GAPPS := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_ENABLE_BLUR := true
+TARGET_INCLUDE_PIXEL_CHARGER := true
 EXTRA_UDFPS_ANIMATIONS := true
 
-# Bootanimation Resolution
-TARGET_BOOT_ANIMATION_RES := 2160
-
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := voltage_raphael
+PRODUCT_NAME := epic_raphael
 PRODUCT_DEVICE := raphael
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 9T Pro

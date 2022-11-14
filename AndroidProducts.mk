@@ -13,9 +13,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/voltage_raphael.mk
+    $(LOCAL_DIR)/epic_raphael.mk
 
 COMMON_LUNCH_CHOICES := \
-    voltage_raphael-user \
-    voltage_raphael-userdebug \
-    voltage_raphael-eng
+    epic_raphael-user \
+    epic_raphael-userdebug \
+    epic_raphael-eng
